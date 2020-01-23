@@ -1,3 +1,8 @@
+//Made by Jan Go & Malcolm Co | LBYCPD2 | DLSU-118
+//This project will check the percentage similarity of a student's work/code.
+//The user needs to place all source codes in a preferred directory.
+//Simply run the program to see the matrix of percentage similarity of all students.
+
 package com.company;
 
 import java.io.*;
@@ -20,7 +25,7 @@ public class FileToString {
         double percent = 0;
         int wordcount = 0;
         double wordpercent;
-       String text1 = readFileAsString("C:\\Users\\Jan Go\\Desktop\\Files\\"+files[i].getName());
+       String text1 = readFileAsString("C:\\Users\\Jan Go\\Desktop\\Files\\"+files[i].getName()); //change the path to your liking
        String text2 = readFileAsString("C:\\Users\\Jan Go\\Desktop\\Files\\"+files[j].getName());
 
         String[] words1 = text1.split("\\W+");
@@ -46,8 +51,8 @@ public class FileToString {
     {
 
         int filecount = 0;
-        File f = new File("C:\\Users\\Jan Go\\Desktop\\Files");
-        File[] files = f.listFiles();
+        File f = new File("C:\\Users\\Jan Go\\Desktop\\Files"); //change the path to your liking
+        File[] files = f.listFiles();                           //should be the same as the one on top
         try {
 
             System.out.println("Files are:");
